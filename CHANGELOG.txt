@@ -1,0 +1,4 @@
+Version 1 (v1) [released in 27 Nov 2019]
+- create script for automatic classification of Czech verbs 
+
+Version 2 (v2) [still open]

@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import sys
+import json
 import requests
 from collections import defaultdict
 
@@ -14,7 +15,7 @@ def give_class(lemma):
         return ('#', '#')
 
     url = 'http://lindat.mff.cuni.cz/services/morphodita/api/generate?data='
-    r = requests.get(url + lemma).json()['result'].strip()
+    r = json.loads(requests.get(url + lemma).text)['result'].strip()
 
     paradigm = set()
     classes = set()
